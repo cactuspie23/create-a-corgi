@@ -6,6 +6,21 @@
   <form action="/corgis" method="POST">
     <label for="name-input">Name:</label>
     <input type="text" name="name" required>
+    <label for="breed-input">Breed:</label>
+    <select name="breed">
+      <option value="Pembroke">Pembroke</option>
+      <option value="Cardigan">Cardigan</option>
+    </select>
+    <label for="color-input">Color:</label>
+    <select name="color">
+      <option value="redwhite">Red and White</option>
+      <option value="blackwhite">Black and White</option>
+      <option value="tri">Tri Color</option>
+      <option value="bluemerle">Blue Merle</option>
+    </select>
+    <label for="age-input">Age:</label>
+    <input type="number" name="age" min="1" required>
+    <button type="submit">Submit</button>
   </form>
 </main>
 

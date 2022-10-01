@@ -1,6 +1,13 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-
+<section>
+  <h1><%= title %></h1>
+  <ul>
+    <% corgis.forEach(corgi => { %>
+      <li><%= corgi.name %></li>
+    <% }) %> 
+  </ul>
+</section>
 
 <%- include('../partials/footer') %>
