@@ -16,12 +16,19 @@ function index(req, res) {
 
 function newCorgi(req, res) {
   res.render('corgis/new', {
-    title: 'Add Corgi'
+    title: 'Create A Corgi'
   })
 }
 
 function create(req, res) {
-
+  Corgi.create(req.body)
+  .then(corgi => {
+    res.redirect(`/corgis/${corgi._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/corgis/new')
+  })
 }
 
 export {
