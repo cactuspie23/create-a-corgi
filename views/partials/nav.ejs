@@ -4,6 +4,16 @@
 </head>
 <body>
   <nav>
+    <a 
+      href="/corgis/new" <%- title === 'Add Corgi' ? 'class="active"' : '' %>
+    >
+      ADD CORGI
+    </a>
+    <a 
+    href="/corgis" <%- title === 'All Corgis' ? 'class="active"' : '' %>
+    >
+      ALL CORGIS
+  </a>
     <% if (user) { %>
       <a href="/auth/logout" class="right">
         <button type="submit">Logout</button>
