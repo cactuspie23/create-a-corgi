@@ -21,6 +21,7 @@ function newCorgi(req, res) {
 }
 
 function create(req, res) {
+  req.body.owner = req.user.profile._id
   Corgi.create(req.body)
   .then(corgi => {
     res.redirect(`/corgis/${corgi._id}`)
@@ -31,8 +32,24 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  Corgi.findById(req.params.id)
+  .populate('owner')
+  .then(corgi => {
+    res.render('corgis/show', {
+      title: 'Corgi Details',
+      corgi,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/corgis')
+  })
+}
+
 export {
   index,
   newCorgi as new,
   create,
+  show,
 }

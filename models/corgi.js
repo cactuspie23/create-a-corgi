@@ -9,7 +9,7 @@ const corgiSchema = new Schema({
   },
   breed: {
     type: String,
-    enum: ['Pembroke', 'Cargdigan'],
+    enum: ['Pembroke', 'Cardigan'],
   },
   color: {
     type: String,
