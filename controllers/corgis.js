@@ -73,6 +73,28 @@ function update(req, res) {
       throw new Error('Not Authorized')
     }
   })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/corgis')
+  })
+}
+
+function deleteCorgi(req, res) {
+  Corgi.findById(req.params.id)
+  .then(corgi => {
+    if (corgi.owner.equals(req.user.profile._id)) {
+      corgi.delete()
+      .then(() => {
+        res.redirect('/corgis')
+      })
+    } else {
+      throw new Error('Not Authorized')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/corgis')
+  })
 }
 
 export {
@@ -82,4 +104,5 @@ export {
   show,
   edit,
   update,
+  deleteCorgi as delete,
 }

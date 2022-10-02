@@ -9,6 +9,7 @@ router.get('/:id', corgisCtrl.show)
 router.get('/:id/edit', isLoggedIn, corgisCtrl.edit)
 router.post('/', isLoggedIn, corgisCtrl.create)
 router.put('/:id', isLoggedIn, corgisCtrl.update)
+router.delete('/:id', isLoggedIn, corgisCtrl.delete)
 
 export {
   router

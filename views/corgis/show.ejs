@@ -5,9 +5,9 @@
   <a href="/corgis/<%= corgi._id %>/edit">
     <button>Edit</button>
   </a>
-  <a href="/corgis/<%= corgi._id %>">
-    <button>Delete</button>
-  </a>
+  <form action="/corgis/<%= corgi._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete</button>
+  </form>
 </section>
 <section>
   <h1><%= corgi.name %> the <%= corgi.breed %> Welsh Corgi</h1>
