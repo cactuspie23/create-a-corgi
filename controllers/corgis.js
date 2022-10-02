@@ -47,9 +47,39 @@ function show(req, res) {
   })
 }
 
+function edit(req, res) {
+  Corgi.findById(req.params.id)
+  .then(corgi => {
+    res.render('corgis/edit', {
+      title: 'Edit Corgi',
+      corgi,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/corgis')
+  })
+}
+
+function update(req, res) {
+  Corgi.findByIdAndUpdate(req.params.id)
+  .then(corgi => {
+    if (corgi.owner.equals(req.user.profile._id)) {
+      corgi.updateOne(req.body)
+      .then(() => {
+        res.redirect(`/corgis/${corgi._id}`)
+      })
+    } else {
+      throw new Error('Not Authorized')
+    }
+  })
+}
+
 export {
   index,
   newCorgi as new,
   create,
   show,
+  edit,
+  update,
 }

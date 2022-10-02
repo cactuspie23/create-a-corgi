@@ -1,6 +1,26 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-
+<main>
+  <h1><%= title %></h1>
+  <h1><%= corgi.name %> </h1>
+  <form action="/corgis/<%= corgi._id %>?_method=PUT" method="POST">
+    <label for="breed-input">Breed:</label>
+    <select name="breed" value="<%= corgi.breed %>">
+      <option value="Pembroke">Pembroke</option>
+      <option value="Cardigan">Cardigan</option>
+    </select>
+    <label for="color-input">Color:</label>
+    <select name="color" value="<%= corgi.color %>">
+      <option value="redwhite">Red and White</option>
+      <option value="blackwhite">Black and White</option>
+      <option value="tri">Tri Color</option>
+      <option value="bluemerle">Blue Merle</option>
+    </select>
+    <label for="age-input">Age:</label>
+    <input type="number" name="age" min="1" required value="<%= corgi.age %>">
+    <button type="submit">Submit</button>
+  </form>
+</main>
 
 <%- include('../partials/footer') %>
