@@ -6,6 +6,11 @@
   <nav>
     <h2>Create-A-Corgi</h2>
     <a 
+    href="/" <%- title === 'Home' ? 'class="active"' : '' %>
+  >
+    HOME
+  </a>
+    <a 
       href="/corgis/new" <%- title === 'Add Corgi' ? 'class="active"' : '' %>
     >
       ADD CORGI

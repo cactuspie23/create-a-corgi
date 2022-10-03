@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-color: #1181dd;
+  background-color: #006b5f;
   color: #f6f6f6;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
@@ -21,12 +21,19 @@ body {
 }
 
 nav {
-  background-color: #f28a02;
-  color: #ffffff;
+  background-color: #ff9b0b;
+  color: #7c3000;
   display: flex;
   align-items: center;
   padding: 10px;
   min-height: 60px;
+}
+
+nav > a {
+  text-decoration: none;
+  margin: 10px;
+  padding: 4px;
+  color: #7c3000;
 }
 
 main {
