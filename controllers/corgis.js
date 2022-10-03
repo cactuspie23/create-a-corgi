@@ -36,9 +36,11 @@ function show(req, res) {
   Corgi.findById(req.params.id)
   .populate('owner')
   .then(corgi => {
+    // const isSelf = corgi.owner.equals(req.user.profile._id)
     res.render('corgis/show', {
       title: 'Corgi Details',
       corgi,
+      // isSelf,
     })
   })
   .catch(err => {
@@ -97,6 +99,25 @@ function deleteCorgi(req, res) {
   })
 }
 
+function createAccessory(req, res) {
+  Corgi.findById(req.params.id)
+  .then(corgi => {
+    corgi.accessories.push(req.body)
+    corgi.save()
+    .then(() => {
+      res.redirect(`/corgis/${req.params.id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect(`/corgis/${req.params.id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/corgis/${req.params.id}`)
+  })
+}
+
 export {
   index,
   newCorgi as new,
@@ -105,4 +126,5 @@ export {
   edit,
   update,
   deleteCorgi as delete,
+  createAccessory,
 }

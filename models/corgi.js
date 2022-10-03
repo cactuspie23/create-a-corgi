@@ -2,6 +2,10 @@ import mongoose from "mongoose"
 
 const Schema = mongoose.Schema
 
+const accessorySchema = new Schema({
+  name: String,
+})
+
 const corgiSchema = new Schema({
   name: {
     type: String,
@@ -13,7 +17,7 @@ const corgiSchema = new Schema({
   },
   color: {
     type: String,
-    enum: ['redwhite', 'blackwhite', 'tri', 'bluemerle'],
+    enum: ['Red and White', 'Black and White', 'Tri', 'Blue Merle'],
   },
   age: {
     type: Number,
@@ -24,6 +28,7 @@ const corgiSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Profile',
   },
+  accessories: [accessorySchema],
 }, {
   timestamps: true
 })

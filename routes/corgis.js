@@ -8,6 +8,7 @@ router.get('/new', isLoggedIn, corgisCtrl.new)
 router.get('/:id', corgisCtrl.show)
 router.get('/:id/edit', isLoggedIn, corgisCtrl.edit)
 router.post('/', isLoggedIn, corgisCtrl.create)
+router.post('/:id/accessories', isLoggedIn, corgisCtrl.createAccessory)
 router.put('/:id', isLoggedIn, corgisCtrl.update)
 router.delete('/:id', isLoggedIn, corgisCtrl.delete)
 

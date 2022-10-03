@@ -2,30 +2,38 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <a href="/corgis/<%= corgi._id %>/edit">
-    <button>Edit</button>
-  </a>
-  <form action="/corgis/<%= corgi._id %>?_method=DELETE" method="POST">
-    <button type="submit">Delete</button>
-  </form>
+    <a href="/corgis/<%= corgi._id %>/edit">
+      <button>Edit</button>
+    </a>
+    <form action="/corgis/<%= corgi._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete</button>
+    </form>
 </section>
 <section>
   <h1><%= corgi.name %> the <%= corgi.breed %> Welsh Corgi</h1>
   <p>
     Color: <%= corgi.color %> 
     Age: <%= corgi.age %> 
-    Accessories: 
+    Accessories: <% corgi.accessories.forEach(accessory => { %>
+      <%= accessory.name %>  
+    <% }) %> 
     Owned by <%= corgi.owner.name %>
   </p>
 </section>
-<section>
-  <h2>Add Accessories</h2>
-  <select name="accessory">
-    <option value="bone">Bone</option>
-    <option value="ball">Ball</option>
-    <option value="stick">Stick</option>
-    <option value="sunglasses">Sunglasses</option>
-  </select>
-</section>
+
+  <section>
+    <h2>Add Accessories</h2>
+    <form action="/corgis/<%= corgi._id %>/accessories" method="POST">
+      <label for="accessory-name">Accessories:</label>
+      <select name="name">
+        <option value="bone">Bone</option>
+        <option value="ball">Ball</option>
+        <option value="stick">Stick</option>
+        <option value="sunglasses">Sunglasses</option>
+      </select>
+      <button type="submit">Add to Pup!</button>
+    </form>
+  </section>
+
 
 <%- include('../partials/footer') %>
