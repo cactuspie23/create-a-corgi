@@ -8,17 +8,17 @@
     <a 
     href="/" <%- title === 'Home' ? 'class="active"' : '' %>
   >
-    HOME
+    Home
   </a>
     <a 
-      href="/corgis/new" <%- title === 'Add Corgi' ? 'class="active"' : '' %>
+      href="/corgis/new" <%- title === 'Create Corgi' ? 'class="active"' : '' %>
     >
-      ADD CORGI
+      Create Corgi
     </a>
     <a 
     href="/corgis" <%- title === 'All Corgis' ? 'class="active"' : '' %>
     >
-      ALL CORGIS
+      All Corgis
   </a>
     <% if (user) { %>
       <a href="/auth/logout" class="right">

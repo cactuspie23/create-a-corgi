@@ -1,0 +1,38 @@
+form {
+  display: grid;
+  row-gap: 8px;
+  grid-template-columns: repeat(2, minmax(auto, 200px));
+  font-size: 20px;
+}
+
+form * {
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+input, select {
+  background-color: #006b5f;
+  color: #80dbcc;
+  border:0;
+  box-shadow:0 0 4px rgba(0,0,0,0.4);
+  transition: .3s;
+}
+
+input:hover, select:hover {
+  box-shadow:0 0 4px rgba(0,0,0,0.8);
+}
+
+form > button {
+  grid-column: span 2;
+  border: none;
+  background-color: #ff9b0b;
+  color: #7c3000;
+  width: 140px;
+  margin: auto;
+  font-size: 22px;
+}
+
+form > button:hover {
+  box-shadow:0 2px 4px rgba(0,0,0,0.8);
+}
