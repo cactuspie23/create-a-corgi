@@ -37,17 +37,12 @@ function show(req, res) {
   Corgi.findById(req.params.id)
   .populate('owner')
   .then(corgi => {
-    Corgi.find({accessories: {$nin: corgi.accessories}})
-    .then(() => {
-      res.render('corgis/show', {
-        title: 'Corgi Details',
-        corgi,
-        options,
-      })
-    })
-    .catch(err => {
-      console.log(err)
-      res.redirect('/corgis')
+    const accessories = corgi.accessories.map(a => a.name)
+    const filteredOptions = options.filter(o => !accessories.includes(o))
+    res.render('corgis/show', {
+      title: 'Corgi Details',
+      corgi,
+      options: filteredOptions,
     })
   })
   .catch(err => {
