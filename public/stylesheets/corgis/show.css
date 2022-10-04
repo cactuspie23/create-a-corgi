@@ -1,0 +1,39 @@
+#update {
+  display: flex;
+  margin: 10px;
+}
+
+#corgi-info {
+  display: grid;
+}
+
+button, form * {
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+select {
+  background-color: #006b5f;
+  color: #80dbcc;
+  border:0;
+  box-shadow:0 0 4px rgba(0,0,0,0.4);
+  transition: .3s;
+}
+
+select:hover {
+  box-shadow:0 0 4px rgba(0,0,0,0.8);
+}
+
+button {
+  border: none;
+  background-color: #ff9b0b;
+  color: #7c3000;
+  width: 140px;
+  margin: auto;
+  font-size: 22px;
+}
+
+button:hover {
+  box-shadow:0 2px 4px rgba(0,0,0,0.8);
+}

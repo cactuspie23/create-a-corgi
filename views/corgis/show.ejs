@@ -1,7 +1,9 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/corgis/show.css" />
 <%- include('../partials/nav') %>
 
-<section>
+<main>
+<section id="update">
     <a href="/corgis/<%= corgi._id %>/edit">
       <button>Edit</button>
     </a>
@@ -9,7 +11,7 @@
       <button type="submit">Delete</button>
     </form>
 </section>
-<section>
+<section id="corgi-info">
   <h1><%= corgi.name %> the <%= corgi.breed %> Welsh Corgi</h1>
   <p>
     Color: <%= corgi.color %> 
@@ -29,13 +31,11 @@
         <% options.forEach(opt =>  { %> 
         <option value="<%= opt %>"><%= opt %></option>
         <% }) %>
-        <!-- <option value="ball">Ball</option>
-        <option value="stick">Stick</option>
-        <option value="sunglasses">Sunglasses</option> -->
       </select>
       <button type="submit">Add to Pup!</button>
     </form>
   </section>
 <% } %> 
+</main>
 
 <%- include('../partials/footer') %>
