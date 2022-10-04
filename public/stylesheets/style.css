@@ -34,3 +34,17 @@ main {
 .right {
   margin-left: auto;
 }
+
+.right > button {
+  grid-column: span 2;
+  border: none;
+  background-color: #ff9b0b;
+  color: #7c3000;
+  width: 140px;
+  margin: auto;
+  font-size: 22px;
+}
+
+.right > button:hover {
+  box-shadow:0 2px 4px rgba(0,0,0,0.8);
+}
