@@ -20,20 +20,22 @@
     Owned by <%= corgi.owner.name %>
   </p>
 </section>
-
+<% if (corgi.owner.equals(user?.profile._id)) { %> 
   <section>
     <h2>Add Accessories</h2>
     <form action="/corgis/<%= corgi._id %>/accessories" method="POST">
       <label for="accessory-name">Accessories:</label>
       <select name="name">
-        <option value="bone">Bone</option>
-        <option value="ball">Ball</option>
+        <% options.forEach(opt =>  { %> 
+        <option value="<%= opt %>"><%= opt %></option>
+        <% }) %>
+        <!-- <option value="ball">Ball</option>
         <option value="stick">Stick</option>
-        <option value="sunglasses">Sunglasses</option>
+        <option value="sunglasses">Sunglasses</option> -->
       </select>
       <button type="submit">Add to Pup!</button>
     </form>
   </section>
-
+<% } %> 
 
 <%- include('../partials/footer') %>
