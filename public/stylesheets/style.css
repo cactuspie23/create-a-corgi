@@ -21,12 +21,22 @@ nav {
   min-height: 60px;
 }
 
+nav > h2 {
+  margin: 0;
+}
+
 nav > a {
   text-decoration: none;
   margin-left: auto;
   padding: 4px;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 800;
   color: #7c3000;
+}
+
+nav > a:hover,
+.right > button:hover {
+  color: #80dbcc;
 }
 
 main {
@@ -45,11 +55,8 @@ main {
   border: none;
   background-color: #ff9b0b;
   color: #7c3000;
-  width: 140px;
+  width: 100px;
   margin: auto;
   font-size: 22px;
-}
-
-.right > button:hover {
-  box-shadow:0 2px 4px rgba(0,0,0,0.8);
+  font-weight: 800;
 }

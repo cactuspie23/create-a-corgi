@@ -5,6 +5,14 @@ a {
   text-align: center;
 }
 
+div > a:hover {
+  color: #006b5f;
+}
+
+.card-title {
+  font-weight: 800;
+}
+
 .card-container {
   display: flex;
   justify-content: center;
