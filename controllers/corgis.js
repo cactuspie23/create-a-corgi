@@ -33,7 +33,7 @@ function create(req, res) {
 }
 
 function show(req, res) {
-  const options = ['Bone', 'Ball', 'Stick', 'Sunglasses']
+  const options = ['Bone', 'Ball', 'Sausage', 'Stick', 'Sunglasses', 'Bowtie']
   Corgi.findById(req.params.id)
   .populate('owner')
   .then(corgi => {
