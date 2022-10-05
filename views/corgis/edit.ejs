@@ -3,16 +3,19 @@
 <%- include('../partials/nav') %>
 
 <main>
+  <% if (corgi.owner.equals(user?.profile._id)) { %> 
   <h1><%= title %></h1>
   <h1><%= corgi.name %> </h1>
   <form action="/corgis/<%= corgi._id %>?_method=PUT" method="POST">
     <label for="breed-input">Breed:</label>
-    <select name="breed" value="<%= corgi.breed %>">
+    <select name="breed">
+      <option value="<%= corgi.breed %>"><%= corgi.breed %></option>
       <option value="Pembroke">Pembroke</option>
       <option value="Cardigan">Cardigan</option>
     </select>
     <label for="color-input">Color:</label>
-    <select name="color" value="<%= corgi.color %>">
+    <select name="color">
+      <option value="<%= corgi.color %>"><%= corgi.color %></option>
       <option value="Red and White">Red and White</option>
       <option value="Black and White">Black and White</option>
       <option value="Tri">Tri Color</option>
@@ -22,6 +25,12 @@
     <input type="number" name="age" min="1" required value="<%= corgi.age %>">
     <button type="submit">Submit</button>
   </form>
+  <% } else { %>
+    <h1>Whoops! You shouldn't be here</h1>
+    <a href="/corgis/<%= corgi._id %>">
+      <button>Go Back</button>
+    </a>
+  <% } %>   
 </main>
 
 <%- include('../partials/footer') %>

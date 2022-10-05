@@ -23,9 +23,10 @@ input:hover, select:hover {
   box-shadow:0 0 4px rgba(0,0,0,0.8);
 }
 
-form > button {
+button {
   grid-column: span 2;
   border: none;
+  border-radius: 10px;
   background-color: #ff9b0b;
   color: #7c3000;
   width: 140px;
@@ -33,6 +34,6 @@ form > button {
   font-size: 22px;
 }
 
-form > button:hover {
+button:hover {
   box-shadow:0 2px 4px rgba(0,0,0,0.8);
 }
