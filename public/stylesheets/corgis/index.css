@@ -1,5 +1,8 @@
+
 a {
   color: #80dbcc;
+  text-decoration: none;
+  text-align: center;
 }
 
 .card-container {
@@ -9,4 +12,8 @@ a {
   gap: 20px;
   margin: 20px;
   max-width: 1600px;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.8);
 }

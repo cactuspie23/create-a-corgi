@@ -6,13 +6,14 @@
   <h1><%= title %></h1>
   <div class="card-container">
     <% corgis.forEach(corgi => { %>
+      <a href="/corgis/<%= corgi._id %>">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h2 class="card-title"><%= corgi.name %></h2>
           <h6 class="card-subtitle mb-2 text-muted"><%= corgi.breed %> Welsh Corgi</h6>
-          <a href="/corgis/<%= corgi._id %>" class="card-link">Details</a>
         </div>
       </div>
+      </a>
     <% }) %> 
   </div>  
 </section>

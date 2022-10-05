@@ -7,6 +7,11 @@ body {
   margin: 0;
 }
 
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
 nav {
   background-color: #ff9b0b;
   color: #7c3000;
