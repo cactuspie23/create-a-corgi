@@ -1,8 +1,8 @@
 form {
   display: grid;
   row-gap: 8px;
-  grid-template-columns: repeat(2, minmax(auto, 200px));
-  font-size: 20px;
+  grid-template-columns: repeat(2, minmax(auto, 180px));
+  font-size: 22px;
 }
 
 form * {

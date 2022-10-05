@@ -5,12 +5,16 @@
 <main>
 <% if (corgi.owner.equals(user?.profile._id)) { %> 
   <section id="update">
+    <div>
       <a href="/corgis/<%= corgi._id %>/edit">
         <button>Edit</button>
       </a>
+    </div>
+    <div>
       <form action="/corgis/<%= corgi._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
       </form>
+    </div>
   </section>
 <% } %>
 <section id="corgi-info">
@@ -19,7 +23,7 @@
     Color: <%= corgi.color %> 
     Age: <%= corgi.age %> 
     Accessories: <% corgi.accessories.forEach(accessory => { %>
-      <%= accessory.name %>  
+      <img src="/images/accessories/<%= accessory.name %>.png" alt="accessory">
     <% }) %> 
     Owned by <%= corgi.owner.name %>
   </p>

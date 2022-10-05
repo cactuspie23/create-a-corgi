@@ -1,6 +1,7 @@
 #update {
   display: flex;
-  margin: 10px;
+  margin: 20px;
+  margin-left: auto;
 }
 
 #corgi-info {

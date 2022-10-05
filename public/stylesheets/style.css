@@ -60,3 +60,13 @@ main {
   font-size: 22px;
   font-weight: 800;
 }
+
+@media all and (max-width: 500px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav > a {
+    margin: auto;
+  }
+}
