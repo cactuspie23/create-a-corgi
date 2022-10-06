@@ -61,12 +61,16 @@ main {
   font-weight: 800;
 }
 
-@media all and (max-width: 500px) {
+.info {
+  width: 500px;
+}
+
+@media all and (max-width: 600px) {
   nav {
     flex-direction: column;
   }
 
-  nav > a {
+  nav > a,div {
     margin: auto;
   }
 }

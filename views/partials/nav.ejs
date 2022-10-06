@@ -8,9 +8,9 @@
     <h2>Create-A-Corgi</h2>
     <a 
     href="/" <%- title === 'Home' ? 'class="active"' : '' %>
-  >
-    Home
-  </a>
+    >
+      Home
+    </a>
     <a 
       href="/corgis/new" <%- title === 'Create Corgi' ? 'class="active"' : '' %>
     >
@@ -20,7 +20,7 @@
     href="/corgis" <%- title === 'All Corgis' ? 'class="active"' : '' %>
     >
       All Corgis
-  </a>
+    </a>
     <% if (user) { %>
       <a href="/auth/logout" class="right">
         <button type="submit">Logout</button>
