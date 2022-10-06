@@ -75,4 +75,8 @@ main {
   nav > a,div {
     margin: auto;
   }
+
+  .info {
+    width: 400px;
+  }
 }
