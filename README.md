@@ -1,6 +1,6 @@
 # ![Corgi Face](public/images/corgiIcon.png) Create-A-Corgi ![Corgi Face](public/images/corgiIcon.png)
 
-(screenshot coming soon)
+![In game screenshot](public/images/Homepage.png)
 
 I have been obsessed with Corgis since I was younger and have owned three Corgis since then. With this app you can learn about Welsh Corgis and even create your own! Login with google and head to the Create Corgi page. Add accessories to fully customize your Corgi.
 
