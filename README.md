@@ -2,9 +2,11 @@
 
 (screenshot coming soon)
 
-With this app you can learn about Welsh Corgis and even create your own! Pictures of my very own Corgis are featured on the Home page. Login with google and head to the Create Corgi page. Add accessories to fully customize your Corgi.
+I have been obsessed with Corgis since I was a little girl and have owned three Corgis since then. With this app you can learn about Welsh Corgis and even create your own! Login with google and head to the Create Corgi page. Add accessories to fully customize your Corgi.
 
 ## Launch the app <a href="https://create-a-corgi.fly.dev">here</a>
+
+## <a href="https://trello.com/b/tc9CuWTt/web-development">Trello</a>
 
 ## Technologies Used
 
