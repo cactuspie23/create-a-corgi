@@ -11,7 +11,7 @@ form * {
   font-size: 18px;
 }
 
-input, select {
+input, select, #bio {
   background-color: #006b5f;
   color: #80dbcc;
   border:0;
@@ -19,7 +19,7 @@ input, select {
   transition: .3s;
 }
 
-input:hover, select:hover {
+input:hover, select:hover, #bio:hover {
   box-shadow:0 0 4px rgba(0,0,0,0.8);
 }
 
