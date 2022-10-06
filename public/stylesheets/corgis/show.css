@@ -1,11 +1,11 @@
 #update {
   display: flex;
   margin: 20px;
-  margin-left: auto;
 }
 
 #corgi-info {
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 
 button, form * {

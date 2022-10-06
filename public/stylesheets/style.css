@@ -5,11 +5,12 @@ body {
   font-family: 'Grandstander', cursive, system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
   margin: 0;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
-  margin-top: 20px;
 }
 
 nav {
@@ -17,6 +18,7 @@ nav {
   color: #7c3000;
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
   padding: 10px;
   min-height: 60px;
 }
