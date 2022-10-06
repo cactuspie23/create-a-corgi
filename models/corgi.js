@@ -17,7 +17,7 @@ const corgiSchema = new Schema({
   },
   color: {
     type: String,
-    enum: ['Red and White', 'Black and White', 'Tricolor'],
+    enum: ['Red and White', 'Black and White', 'Tricolor', 'Sable'],
   },
   age: {
     type: Number,

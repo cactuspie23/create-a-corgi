@@ -3,11 +3,15 @@
 <%- include('../partials/nav') %>
 
 <main>
+  <img src="/images/corgis/<%= corgi.breed %><%= corgi.color %>.png" alt="corgi">
 <section id="corgi-info">
   <h1><%= corgi.name %></h1>
   <h2><%= corgi.breed %> Welsh Corgi</h2>
   <div>
     Bio: <%= corgi.bio %> 
+  </div>
+  <div>
+    Owned by: <%= corgi.owner.name %>
   </div>
   <div>
     Color: <%= corgi.color %> 
@@ -19,9 +23,6 @@
     Accessories: <% corgi.accessories.forEach(accessory => { %>
       <img src="/images/accessories/<%= accessory.name %>.png" alt="accessory">
     <% }) %> 
-  </div>
-  <div>
-    Owned by: <%= corgi.owner.name %>
   </div>
 </section>
 <% if (corgi.owner.equals(user?.profile._id)) { %> 
