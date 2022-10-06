@@ -11,11 +11,13 @@
     >
       Home
     </a>
+    <% if (user) { %> 
     <a 
       href="/corgis/new" <%- title === 'Create Corgi' ? 'class="active"' : '' %>
     >
       Create Corgi
     </a>
+    <% } %> 
     <a 
     href="/corgis" <%- title === 'All Corgis' ? 'class="active"' : '' %>
     >
