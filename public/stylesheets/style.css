@@ -13,6 +13,10 @@ h1, h2 {
   text-align: center;
 }
 
+p {
+  margin-top: 12px;
+}
+
 nav {
   background-color: #ff9b0b;
   color: #7c3000;
