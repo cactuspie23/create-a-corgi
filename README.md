@@ -8,11 +8,11 @@ I have been obsessed with Corgis since I was younger and have owned three Corgis
 ![In game screenshot](public/images/Details.png)
 
 ## Planning Materials
-***
+
 ### <a href="https://trello.com/b/tc9CuWTt/web-development">Trello</a>
 
 ## Technologies Used
-***
+
 - Mongoose and MongoDB
 - Express.js
 - Node.js
@@ -23,14 +23,14 @@ I have been obsessed with Corgis since I was younger and have owned three Corgis
 - Passport Google One Tap
 
 ## Ice Box
-***
+
 - [ ] Add a randomized Corgi to be featured on the home page
 - [x] Add photos on the details page to reflect the breed and color selected
 - [ ] Add comment functionality
 - [ ] Profile view to see all of a user's Corgis in one place
 
 ## Credits
-***
+
 <a href="https://www.freepik.com/free-vector/v60-pla-kala-03-animals_3129737.htm#page=2&query=corgi%20icon&position=17&from_view=search&track=sph">Favicon Image by rawpixel.com</a> on Freepik  
 <a href="https://www.freepik.com/free-vector/pet-dog-icons-collar-bowl-dog-illustration-dogs-kennel_13031445.htm#query=dog%20toy%20icon&position=7&from_view=search&track=sph">Accessory Images by macrovector</a> on Freepik  
 <a href="https://www.freepik.com/free-vector/woman-accessories-photo-booth-props-vector_3460095.htm#query=accessory%20icon&position=0&from_view=search&track=sph">Accessory Images by rawpixel.com</a> on Freepik  
