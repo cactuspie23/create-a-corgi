@@ -31,7 +31,6 @@ const corgiSchema = new Schema({
   accessories: [accessorySchema],
   bio: {
     type: String,
-    required: true,
   },
 }, {
   timestamps: true

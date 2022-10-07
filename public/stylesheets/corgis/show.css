@@ -1,12 +1,3 @@
-#update {
-  display: flex;
-  margin: 20px;
-}
-
-#corgi-info {
-  display: flex;
-  flex-direction: column;
-}
 
 button, form * {
   padding: 5px;
@@ -37,4 +28,24 @@ button {
 
 button:hover {
   box-shadow:0 2px 4px rgba(0,0,0,0.8);
+}
+
+.item {
+  margin: 10px;
+  max-width: 500px;
+}
+
+.u {
+
+}
+
+#update {
+  display: flex;
+  margin: 20px;
+}
+
+#corgi-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: inherit;
 }

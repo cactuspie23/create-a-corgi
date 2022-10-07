@@ -7,28 +7,28 @@
 <section id="corgi-info">
   <h1><%= corgi.name %></h1>
   <h2><%= corgi.breed %> Welsh Corgi</h2>
-  <div>
-    Bio: <%= corgi.bio %> 
+  <div class="item">
+    <span class="u">Bio</span>: <%= corgi.bio %> 
   </div>
-  <div>
-    Owned by: <%= corgi.owner.name %>
+  <div class="item">
+    <span class="u">Owned by</span>: <%= corgi.owner.name %>
   </div>
-  <div>
-    Color: <%= corgi.color %> 
+  <div class="item">
+    <span class="u">Color</span>: <%= corgi.color %> 
   </div>
-  <div>
-    Age: <%= corgi.age %> 
+  <div class="item">
+    <span class="u">Age</span>: <%= corgi.age %> 
   </div>  
   <div>
-    Accessories: <% corgi.accessories.forEach(accessory => { %>
+    <span class="u">Accessories</span>: <% corgi.accessories.forEach(accessory => { %>
       <img src="/images/accessories/<%= accessory.name %>.png" alt="accessory">
     <% }) %> 
   </div>
 </section>
 <% if (corgi.owner.equals(user?.profile._id)) { %> 
   <section id="accessories">
-    <h2>Add Accessories</h2>
-    <form action="/corgis/<%= corgi._id %>/accessories" method="POST">
+    <h2 class="item">Add Accessories</h2>
+    <form action="/corgis/<%= corgi._id %>/accessories" method="POST" class="item">
       <label for="accessory-name">Accessories:</label>
       <select name="name">
         <% options.forEach(opt =>  { %> 
@@ -39,12 +39,12 @@
     </form>
   </section>
   <section id="update">
-    <div>
+    <div class="item">
       <a href="/corgis/<%= corgi._id %>/edit">
         <button>Edit</button>
       </a>
     </div>
-    <div>
+    <div class="item">
       <form action="/corgis/<%= corgi._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
       </form>
